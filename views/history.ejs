@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History: <%= title %></title>
+  </head>
+  <body>
+    <h1>Version History: <%= title %></h1>
+
+    <p>This article has <%= versions.length %> version(s).</p>
+
+    <ul>
+      <% versions.forEach((version, index) => { %>
+        <li>
+          <a href="/article/<%= encodedName %>/history/<%= version.versionId %>">
+            <!-- index + 1 because version numbering starts at 1, not 0 (like version 0 doesn't make sense...) -->
+            Version <%= index + 1 %> - <%= new Date(version.timestamp).toLocaleString() %>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+
+    <a href="/article/<%= encodedName %>">Back to Current Article</a>
+    <a href="/">Home</a>
+  </body>
+</html>

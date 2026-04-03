@@ -1,0 +1,26 @@
+{
+  "name": "a1-jiki-shervinbabaei2007",
+  "version": "1.0.0",
+  "description": "In this Assignment, you will make a complete (if modest) MPA web application, in particular a simple Wiki.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp2131-202610/a1-jiki-ShervinBabaei2007.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/comp2131-202610/a1-jiki-ShervinBabaei2007/issues"
+  },
+  "homepage": "https://github.com/comp2131-202610/a1-jiki-ShervinBabaei2007#readme",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}

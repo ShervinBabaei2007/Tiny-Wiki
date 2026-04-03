@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Jiki Page!</h1>
+    </header>
+
+        <!-- search functionality -->
+    <form action="/search" method="get">
+      <label for="SearchInput">Search</label>
+      <input type="text" name="SearchTerm" id="SearchInput">
+      <button>Search:</button>
+    </form>
+
+    <h2>Random Article:</h2>
+    <!-- displays random articles from db (let pages ...) -->
+    <ul>
+      <% articles.forEach(article => { %>
+       <li>
+        <a href="/article/<%= article.code_name %>"><%= article.name %></a>
+       </li>
+      <% }) %>
+    </ul>
+
+    <a href="/newarticle">Create Article</a>
+    <br><br><br>
+  </body>
+</html>

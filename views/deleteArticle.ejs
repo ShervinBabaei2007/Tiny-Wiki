@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete <%= title %></title>
+  </head>
+  <body>
+    <h1>Are you sure you want to delete "<%= title %>"?</h1>
+
+    <form action="/article/<%= encodeURIComponent(title) %>/delete" method="post">
+      <button type="submit">YES</button>
+    </form>
+
+    <a href="/">Home</a>
+    <a href="/article/<%= encodeURIComponent(title) %>">Back to Article</a>
+  </body>
+</html>

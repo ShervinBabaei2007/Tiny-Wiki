@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit <%= title %></title>
+  </head>
+  <body>
+    <h1>Edit Article: <%= title %></h1>
+
+    <form action="/article/<%= encodeURIComponent(title) %>/edit" method="post">
+      <p>Article Name: <%= title %></p>
+      <textarea name="content" rows="10" cols="50"><%= content %></textarea>
+      <button type="submit">Save</button>
+    </form>
+
+    <a href="/">Home</a>
+    <a href="/article/<%= encodeURIComponent(title) %>">Cancel</a>
+  </body>
+</html>

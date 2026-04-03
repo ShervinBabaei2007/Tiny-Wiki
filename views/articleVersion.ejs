@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> (Historical Version)</title>
+    <style>
+      .warning-box {
+        background-color: #ffffcc;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ffff00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %> (Historical Version)</h1>
+
+    <div class="warning-box">
+      <strong>This is an old version of the article.</strong><br />
+      Version ID: <%= versionId %><br />
+      Saved at: <%= new Date(timestamp).toLocaleString() %>
+    </div>
+
+    <p><%- content %></p>
+
+    <hr />
+
+    <p><em>Edit and Delete are disabled for historical versions.</em></p>
+
+    <a href="/article/<%= encodedName %>">Return to Current Version</a>
+    <a href="/article/<%= encodedName %>/history">View All Versions</a>
+    <a href="/">Home</a>
+  </body>
+</html>
