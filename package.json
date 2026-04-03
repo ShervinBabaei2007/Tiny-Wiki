@@ -4,6 +4,7 @@
   "description": "In this Assignment, you will make a complete (if modest) MPA web application, in particular a simple Wiki.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
