@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 const db = require("./fake-wiki-db");
 const { autoLinkification } = require("./Auto-Linkification");
 
