@@ -185,4 +185,4 @@ app.get("/article/:articlename/history/:versionid", (req, res) => {
   });
 });
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
